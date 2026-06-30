@@ -1,0 +1,280 @@
+/* Use a more-intuitive box-sizing model */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+*:not(dialog) {
+  margin: 0;
+}
+
+/* Enable keyword animations */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    interpolate-size: allow-keywords;
+  }
+}
+body {
+  /* Increase line-height */
+  line-height: 1.5;
+  /* Improve text rendering */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100svh;
+}
+
+/* Improve media defaults */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Inherit fonts for form controls */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Avoid text overflows */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* Improve line wrapping */
+p {
+  text-wrap: pretty;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+/* reset links */
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+/* remove list style */
+ol,
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+/*
+  Create a root stacking context
+*/
+#root,
+#__next {
+  isolation: isolate;
+}
+
+svg {
+  width: 30px;
+  height: 30px;
+}
+
+h1 {
+  font-size: 3em;
+}
+
+h2 {
+  font-size: 2em;
+}
+
+h3 {
+  font-size: 1.5em;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+
+header #hero {
+  position: relative;
+}
+header #hero img {
+  padding: 1em;
+}
+header #hero h1 {
+  position: absolute;
+  top: 100px;
+  height: 50px;
+  left: 20px;
+}
+header #hero .about {
+  padding-inline: 1em;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+header #hero .about div ul {
+  justify-content: center;
+}
+@media (min-width: 600px) {
+  header #hero {
+    box-shadow: 1px 1px 2px black;
+    padding-inline: 2em;
+    margin-block-start: 8em;
+    margin-inline: 3em;
+  }
+  header #hero img {
+    float: left;
+    width: 300px;
+    margin-block-start: -88px;
+    margin-inline-start: -65px;
+    padding: 0.5em;
+  }
+  header #hero h1 {
+    top: -80px;
+    left: 220px;
+  }
+  header #hero .about {
+    padding-inline: 0;
+    padding-block-start: 4em;
+    padding-block-end: 1em;
+    display: block;
+  }
+  header #hero .about div ul {
+    margin-block-start: 0.5em;
+    justify-content: end;
+  }
+}
+
+section,
+footer {
+  padding-inline: 1em;
+  margin-block-start: 1.5em;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8em;
+  align-items: center;
+  width: 100%;
+}
+@media (min-width: 600px) {
+  section,
+  footer {
+    align-items: start;
+    padding-inline: 3em;
+  }
+}
+
+ul {
+  display: flex;
+  gap: 1em;
+}
+
+ul#projects {
+  flex-direction: column;
+  gap: 2em;
+  width: 100%;
+}
+ul#projects li {
+  width: 100%;
+}
+@media (min-width: 600px) {
+  ul#projects {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+ul#projects .card {
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.651);
+  width: 100%;
+}
+ul#projects .card__img {
+  display: flex;
+  flex-direction: column;
+  background-color: black;
+}
+ul#projects .card__img img {
+  aspect-ratio: 2/2;
+  width: 300px;
+  align-self: center;
+}
+ul#projects .card__name-ctn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.2em 0.5em;
+}
+ul#projects .card__name-ctn div {
+  display: flex;
+  gap: 0.5em;
+}
+ul#projects .card__desc {
+  padding: 0.5em;
+}
+
+#projects {
+  display: grid;
+  gap: 4em;
+}
+
+.footer {
+  padding-inline: 0;
+  padding-block-start: 2em;
+  background-color: rgb(141, 141, 231);
+}
+.footer__contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  margin-block: 0.5em;
+}
+.footer__sm-icons ul {
+  justify-content: center;
+}
+.footer__sm-icons ul svg {
+  width: 40px;
+  height: 40px;
+}
+@media (min-width: 600px) {
+  .footer {
+    flex-direction: row;
+  }
+  .footer__img {
+    padding-inline: 2em;
+    margin-inline: 2em;
+    margin-block-end: 2em;
+  }
+  .footer__sm-icons ul {
+    align-items: start;
+    justify-content: start;
+  }
+  .footer div {
+    padding-inline: 0.5em;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+  }
+}/*# sourceMappingURL=styles.css.map */
